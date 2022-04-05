@@ -1,0 +1,13 @@
+:root {
+  --primary-color: #FF9B4E;
+  --secondary-color: #90CAF9;
+  --text-color: #22222C;
+  --font: 'Noto Sans Display', sans-serif;
+}
+body {
+  margin: 0;
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
