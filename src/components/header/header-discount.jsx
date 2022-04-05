@@ -3,12 +3,12 @@ import styles from './header-discount.module.css';
 import { ReactComponent as Tag } from '../../svg/tag.svg';
 
 
-const HeaderDiscount = () => {
+const HeaderDiscount = ({discount, timeLeft}) => {
   return (
     <>
       <div className={styles.container}>
         <Tag/>
-        <p className={styles.text}><span className={styles.span}>50%</span> discount only valid for <span className={styles.span}>00:15:49</span></p>
+        <p className={styles.text}><span className={styles.span}>{discount}%</span> discount only valid for <span className={styles.span}>{timeLeft}</span></p>
       </div>
     </>
   );

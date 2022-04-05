@@ -3,9 +3,12 @@
   --secondary-color: #90CAF9;
   --text-color: #22222C;
   --font: 'Noto Sans Display', sans-serif;
+  --fontSize: 16px
 }
 body {
+  box-sizing: border-box;
   margin: 0;
+  font-size: var(--font);
   font-family: var(--font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

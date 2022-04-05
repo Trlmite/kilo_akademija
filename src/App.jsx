@@ -3,7 +3,11 @@ import Header from './components/header/header';
 
 const App = () => {
   return (
-    <Header/>
+    <Header
+      discount="50"
+      timeLeft="00:05:50"
+      ordersNo="52 147"
+    />
   );
 }
 

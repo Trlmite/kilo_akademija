@@ -1,12 +1,13 @@
 .container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     width: 100%;
     background-color: var(--secondary-color);
 }
 .text{
-    font-size: 15px;
+    margin-left: 1rem;
+    font-size: 1rem;
     font-weight: 400;
     color: white;
 }
