@@ -1,5 +1,6 @@
 import React from 'react'
 import PricingOption from './pricing-option'
+import Button from '../button/button'
 import styles from './pricing.module.css'
 
 const Pricing = () => {
@@ -20,6 +21,9 @@ const Pricing = () => {
         <PricingOption
             month="1"
             price="19.99"
+        />
+        <Button
+            text="Get your plan"
         />
     </div>
   )
