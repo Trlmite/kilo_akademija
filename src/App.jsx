@@ -2,7 +2,10 @@ import React from 'react';
 import Header from './components/header/header';
 import Pricing from './components/pricing/pricing';
 import ProgramReview from './components/program-review/program-review';
+import UserReview from './components/user-reviews/user-review';
+import Button from './components/button/button';
 import styles from './styles/app.module.css'
+
 
 import { ReactComponent as PlanIcon } from './svg/planIcon.svg'
 import { ReactComponent as ExerciseIcon } from './svg/exercise.svg'
@@ -12,72 +15,117 @@ import { ReactComponent as WhistleIcon } from './svg/whistle.svg'
 import { ReactComponent as WatchIcon } from './svg/smartwatch.svg'
 import { ReactComponent as BookCheckIcon } from './svg/bookcheck.svg'
 
+import User1Img from './images/user1.jpg'
+import User2Img from './images/user2.jpg'
+import User3Img from './images/user3.jpg'
+
 
 const data = [
   {
-    svg: <PlanIcon/>,
+    svg: <PlanIcon />,
     title: 'A personalized yoga program',
     describtion: 'Completely safe and focused on your key goals',
     id: 1,
   },
   {
-    svg: <ExerciseIcon/>,
+    svg: <ExerciseIcon />,
     title: 'Easy & enjoyable yoga workouts for your level',
     describtion: 'Program adjusts to your level and pace',
     id: 2
   },
   {
-    svg: <ShoeIcon/>,
+    svg: <ShoeIcon />,
     title: 'No special preparation needed',
     describtion: 'Perfect for begginners! Requires no special preparation or equipment',
     id: 3
   },
   {
-    svg: <DietIcon/>,
+    svg: <DietIcon />,
     title: 'Daily motivation & accountability',
     describtion: 'Track your progress, develop a healthy routine, reach goals faster',
     id: 4
   },
   {
-    svg: <WhistleIcon/>,
+    svg: <WhistleIcon />,
     title: 'Daily motivation & accountability',
     describtion: 'Track your progress, develop a healthy routine, reach goals faster',
     id: 5
   },
   {
-    svg: <WatchIcon/>,
+    svg: <WatchIcon />,
     title: 'Browse from various yoga challenges',
     describtion: '30 d morning yoga, mindful yoga, back flexibility challenge, and more!',
     id: 6
   },
   {
-    svg: <BookCheckIcon/>,
+    svg: <BookCheckIcon />,
     title: 'A complete guide to get started',
     describtion: 'Best tips, guidelines, advice, and recommendations for successful practice',
     id: 7
   },
 ]
+const userReviews = [
+  {
+    user: "Emily",
+    age: 28,
+    location: "Delaware, NJ",
+    review: "I have been using this program for 3 months now and It helped me to lose 16lbs, taught me how to breathe properly and now I look forward to my workout. Great challenges for different problem zones. Definitely recommend to anyone that wants to lose weight and feel better without long hour at the gym or exhausting workouts.",
+    userImg: User1Img
+  },
+  {
+    user: "Kylie",
+    age: 40,
+    location: "Los Angeles",
+    review: "I will be very straightforward - I hate sports and working out. Positive Yoga put my physical activity to the next level. I started to enjoy my morning yoga routines where I get my dose of cardio, resistance, and stretching in one place. I could barely hold a plank at the beginning. Now I’m doing various yoga poses that looked impossible at first. My body shape improved a lot and I am very motivated by both: results and the feeling of progress.",
+    userImg: User2Img
+  },
+  {
+    user: "Jesica",
+    age: 51,
+    location: "San Francisco, CA",
+    review: "I have many friends who practice yoga and I decided to try it myself. It is the best decision I have made in a long time. With Positive Yoga program I started to lose weight, which was demotivating me for a long time. Also, I’ve learned about yoga philosophy and poses that encourage me to practice mindfulness and pay attention to stress reduction. I am very proud of myself. Feeling better is my biggest motivation.",
+    userImg: User3Img
+  },
+]
+
 
 
 const App = () => {
   return (
     <>
-    <Header
-      discount="50"
-      timeLeft="00:05:50"
-      ordersNo="52 147"
-    />
-    <Pricing/>
-    <h3 className={styles.margin}>What's in my program?</h3>
-    {data.map(x => 
-      <ProgramReview
-        key={x.id}
-        svg={x.svg}
-        title={x.title}
-        description={x.describtion}
+      <Header
+        discount="50"
+        timeLeft="00:05:50"
+        ordersNo="52 147"
       />
-    )}
-    <h3 className={styles.margin}>Hear success stories from our clients</h3>
+      <Pricing />
+      <div>
+        <h3 className={styles.margin}>What's in my program?</h3>
+        {data.map(x =>
+          <ProgramReview
+            key={x.id}
+            svg={x.svg}
+            title={x.title}
+            description={x.describtion}
+          />
+        )}
+      </div>
+      <div>
+        <h3 className={styles.margin}>Hear success stories from our clients</h3>
+        {userReviews.map(user => 
+          <UserReview
+            key={user.age}
+            user={user.user}
+            age={user.age}
+            location={user.location}
+            userImg={user.userImg}
+            review={user.review}
+          />
+        )}
+      </div>
+      <Button
+        text='Get my plan'
+      />
     </>
   );
 }
