@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    flex-direction: row;
+}
+.accent{
+    position: absolute;
+    background: #EBEBEB;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.image1{
+    margin-top: 2.5rem;
+}
+.image2{
+    align-self: flex-end;
+}

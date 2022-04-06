@@ -55,7 +55,7 @@ const PricingOption = ({ month, price, discount, active}) => {
         <div className={styles.innerTextContainer}>
           {discountCheck ? 
             <><span className={styles.totalWithoutDiscount}>${total}</span><span className={styles.discountTotal}>${discountTotal}</span></> 
-            : monthsCheck ? `${total}` : null
+            : monthsCheck ? `$${total}` : null
           }
           <p className={styles.innerText}>
             {monthsCheck 

@@ -6,6 +6,7 @@ import ProgramReview from './components/program-review/program-review';
 import UserReview from './components/user-reviews/user-review';
 import YogaPros from './components/yoga-pros/pros';
 import Button from './components/button/button';
+import Preview from './components/preview/preview';
 
 //styles
 import styles from './styles/app.module.css'
@@ -169,9 +170,12 @@ const App = () => {
           <div>
             <h3 className={styles.margin}>Start your yoga journey now!</h3>
             <div>
-              
+              <Preview/>
             </div>
           </div>
+        </div>
+        <div>
+          <h3 className={styles.margin}>Frequently Asked Questions </h3>
         </div>
       </div>
     </>
