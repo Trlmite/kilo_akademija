@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 1rem 0 1rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 2px solid rgba(0, 0, 0, 0.08);
+    border-radius: 1rem;
+    font-weight: 400;
+}
+.innerTextContainer{
+    display: flex;
+    font-weight: 600;
+    flex-direction: row;
+    align-items: baseline;
+}
+.discount{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.5rem;
+    padding: 0.18rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: #FFE082;
+    border-radius: 0.375rem;
+}
+.innerText{
+    font-weight: 400;
+}
+.discountTotal{
+    color: var(--primary-color);
+}
+
+.totalWithoutDiscount {
+    text-decoration-line: line-through;
+}
+
+.active {
+    border: 2px solid var(--primary-color);
+}

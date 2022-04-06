@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.text{
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+}
+.textSpan{
+    color: var(--primary-color);
+}
