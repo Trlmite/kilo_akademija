@@ -7,6 +7,7 @@ import UserReview from './components/user-reviews/user-review';
 import YogaPros from './components/yoga-pros/pros';
 import Button from './components/button/button';
 import Preview from './components/preview/preview';
+import FAQ from './components/faq/faq';
 
 //styles
 import styles from './styles/app.module.css'
@@ -118,6 +119,25 @@ const pros = [
     text: "Extra attention to muscle, joint and back health"
   },
 ]
+const faq =[
+  {
+    title:'What happens after I order?',
+    content: 'After you place your order, we get to work! Based on the questions you answered in the quiz, we’ll craft your personal plan to your level with recomendations on how to improve.',
+    id: 1,
+  },{
+    title:'Where I can access my plan?',
+    content: "Your plan will be accessible in Positive Yoga's web app with a special link generated after your purchase.",
+    id: 2,
+  },{
+    title:'How can I cancel my subscription?',
+    content: 'You can manage or cancel your subscription by writing our customer support hello@positiveyoga.app',
+    id: 3,
+  },{
+    title:'Why this program is paid?',
+    content: 'We are aiming to offer our clients the best experience, which comes with a lot of work.  The entire yoga program is developed by our large team of experts that work long hours to prepare effective, trustworthy and enjoyable content and workouts that can help you to reach your goals. The program is also completely free of ads and is constantly being updated based on your feedback!',
+    id: 4,
+  },
+]
 
 
 const App = () => {
@@ -176,6 +196,16 @@ const App = () => {
         </div>
         <div>
           <h3 className={styles.margin}>Frequently Asked Questions </h3>
+          {faq.map(question =>
+            <FAQ
+              key={question.id}
+              title={question.title}
+              content={question.content}
+            />
+            )}
+          <Button
+            text='Get my plan'
+          />
         </div>
       </div>
     </>

@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 0.75rem;
+}
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    padding: 1rem;
+    width: 100%;
+}
+.text{
+    display: none;
+}
+.active{
+    font-weight: 400;
+    padding: 1rem;
+    display: flex;
+}
