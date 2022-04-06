@@ -16,13 +16,11 @@ const PricingOption = ({ month, price, discount, active}) => {
   const priceAfterDiscount = (price, discount) => {
     let priceWithDiscount = Number(price) * ((100 - Number(discount))/100)
     priceWithDiscount = priceWithDiscount.toFixed(2)
-    console.log({priceWithDiscount})
     return priceWithDiscount
   }
  
   const totalPrice = (month, price) => {
     total = Number(month) * Number(price)
-    console.log(total)
     return total
   }
 
