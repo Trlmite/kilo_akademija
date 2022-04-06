@@ -1,12 +1,16 @@
 import React from 'react';
+//components
 import Header from './components/header/header';
 import Pricing from './components/pricing/pricing';
 import ProgramReview from './components/program-review/program-review';
 import UserReview from './components/user-reviews/user-review';
+import YogaPros from './components/yoga-pros/pros';
 import Button from './components/button/button';
+
+//styles
 import styles from './styles/app.module.css'
 
-
+//images&SVG's
 import { ReactComponent as PlanIcon } from './svg/planIcon.svg'
 import { ReactComponent as ExerciseIcon } from './svg/exercise.svg'
 import { ReactComponent as ShoeIcon } from './svg/shoe.svg'
@@ -87,7 +91,32 @@ const userReviews = [
     userImg: User3Img
   },
 ]
-
+const pros = [
+  {
+    id: 1,
+    text: "Each program adapts to your age or fitness level"
+  },
+  {
+    id: 2,
+    text: "Mindful way to exercise and get real results"
+  },
+  {
+    id: 3,
+    text: "Effective and long-term lasting results"
+  },
+  {
+    id: 4,
+    text: "Suited activities that benefit both the mind and body"
+  },
+  {
+    id: 5,
+    text: "Low-intensity but highly-effective workouts"
+  },
+  {
+    id: 6,
+    text: "Extra attention to muscle, joint and back health"
+  },
+]
 
 
 const App = () => {
@@ -126,6 +155,25 @@ const App = () => {
       <Button
         text='Get my plan'
       />
+      <div>
+        <div>
+          <div>
+            <h3 className={styles.margin}>Is Positive Yoga right for me?</h3>
+            {pros.map(pro =>
+              <YogaPros
+                key={pro.id}
+                content={pro.text}
+              />
+              )}
+          </div>
+          <div>
+            <h3 className={styles.margin}>Start your yoga journey now!</h3>
+            <div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
