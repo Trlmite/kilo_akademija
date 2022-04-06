@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 1rem;
+    margin-top: 0.625rem;
+}
+.innerContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.iconContainer{
+    display: flex;
+    margin-right: 1rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.title{
+    font-weight: 600;
+}
+.description{
+    opacity: 0.64;
+}
