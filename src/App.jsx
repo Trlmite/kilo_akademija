@@ -148,8 +148,10 @@ const App = () => {
         timeLeft="00:05:50"
         ordersNo="52 147"
       />
-      <Pricing />
-      <div>
+      <div className={styles.container}>
+        <Pricing 
+        />
+        <div>
         <h3 className={styles.margin}>What's in my program?</h3>
         {data.map(x =>
           <ProgramReview
@@ -159,25 +161,30 @@ const App = () => {
             description={x.describtion}
           />
         )}
+        </div>
       </div>
       <div>
         <h3 className={styles.margin}>Hear success stories from our clients</h3>
-        {userReviews.map(user => 
-          <UserReview
-            key={user.age}
-            user={user.user}
-            age={user.age}
-            location={user.location}
-            userImg={user.userImg}
-            review={user.review}
+        <div className={styles.container}>
+          {userReviews.map(user => 
+            <UserReview
+              key={user.age}
+              user={user.user}
+              age={user.age}
+              location={user.location}
+              userImg={user.userImg}
+              review={user.review}
+            />
+          )}
+        </div>
+        <div className={styles.container}>
+          <Button
+            text='Get my plan'
           />
-        )}
+        </div>
       </div>
-      <Button
-        text='Get my plan'
-      />
       <div>
-        <div>
+        <div className={`${styles.container} ${styles.previewContainer}`}>
           <div>
             <h3 className={styles.margin}>Is Positive Yoga right for me?</h3>
             {pros.map(pro =>
@@ -194,7 +201,7 @@ const App = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div className={styles.faqContainer}>
           <h3 className={styles.margin}>Frequently Asked Questions </h3>
           {faq.map(question =>
             <FAQ
@@ -203,9 +210,26 @@ const App = () => {
               content={question.content}
             />
             )}
-          <Button
-            text='Get my plan'
+          <div className={styles.container}>
+            <Button
+              text='Get my plan'
+            />
+          </div>
+        </div>
+      </div>
+      <div className={styles.container}>
+        <Pricing 
+        />
+        <div>
+        <h3 className={styles.margin}>What's in my program?</h3>
+        {data.map(x =>
+          <ProgramReview
+            key={x.id}
+            svg={x.svg}
+            title={x.title}
+            description={x.describtion}
           />
+        )}
         </div>
       </div>
     </>

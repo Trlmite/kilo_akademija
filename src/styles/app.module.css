@@ -2,3 +2,38 @@
     padding: 0 1rem;
     margin: 0.5rem 0;
 }
+
+.container:last-child{
+    margin-bottom: 7rem;
+}
+
+
+@media only screen and (min-width: 992px) {
+    .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 3rem;
+        width: 100%;
+        padding: 0 12.25rem;
+    }
+
+    .previewContainer{
+        flex-direction: row-reverse;
+    }
+
+    .faqContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 12.25rem;
+        margin: 0 auto;
+        margin-top: 3rem;
+    }
+
+    .margin{
+        text-align: center;
+        margin-top: 3rem;
+    }
+}
